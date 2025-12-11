@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    /* Videodaki gibi yumuşak bir arka plan */
+    background: linear-gradient(135deg, #1f2833, #0a111a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #c5c6c7;
+}
+
+.login-container {
+    background: rgba(10, 20, 30, 0.8); /* Yarı saydam arka plan */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #66fcf1; /* Parlak vurgu rengi */
+    font-weight: 600;
+}
+
+/* --- Giriş Grubu Stilleri ve Animasyon --- */
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #45a29e;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: border-bottom 0.3s ease;
+}
+
+/* Odaklanıldığında alt çizgiyi değiştir */
+.input-group input:focus {
+    border-bottom-color: #66fcf1;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: #c5c6c7;
+    pointer-events: none;
+    transition: 0.3s ease; /* Etiket kayması için animasyon */
+    font-size: 16px;
+}
+
+.input-group i {
+    margin-right: 8px;
+    color: #66fcf1;
+}
+
+/* *ANA ANİMASYON ETKİSİ* */
+/* Giriş alanına odaklanıldığında VEYA içerik girildiğinde etiketi yukarı kaydır */
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+    color: #66fcf1;
+}
+
+
+/* --- Düğme ve Bağlantılar --- */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background: #66fcf1;
+    border: none;
+    border-radius: 5px;
+    color: #1f2833;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.login-button:hover {
+    background: #45a29e;
+    transform: translateY(-2px);
+}
+
+.extra-links {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.extra-links a {
+    color: #45a29e;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.extra-links a:hover {
+    color: #66fcf1;
+}
